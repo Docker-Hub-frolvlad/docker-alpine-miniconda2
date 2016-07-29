@@ -13,11 +13,10 @@ RUN CONDA_VERSION="4.0.5" && \
     wget "http://repo.continuum.io/miniconda/Miniconda2-${CONDA_VERSION}-Linux-x86_64.sh" -O miniconda.sh && \
     echo "$CONDA_MD5_CHECKSUM  miniconda.sh" | md5sum -c && \
     bash miniconda.sh -f -b -p "$CONDA_DIR" && \
+    echo "export PATH=$CONDA_DIR/bin:\$PATH" > /etc/profile.d/conda.sh && \
     rm miniconda.sh && \
     \
     conda update --all --yes && \
     conda clean --all --yes && \
     \
     apk del --purge .build-dependencies
-
-RUN echo "export PATH=$CONDA_DIR/bin:\$PATH" > /etc/profile.d/conda.sh
