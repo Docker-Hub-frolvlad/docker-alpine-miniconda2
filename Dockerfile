@@ -17,6 +17,7 @@ RUN CONDA_VERSION="4.0.5" && \
     rm miniconda.sh && \
     \
     conda update --all --yes && \
+    conda config --set auto_update_conda False && \
     conda clean --all --yes && \
     \
     apk del --purge .build-dependencies
