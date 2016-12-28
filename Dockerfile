@@ -7,7 +7,7 @@ ENV PATH="$CONDA_DIR/bin:$PATH"
 RUN CONDA_VERSION="4.0.5" && \
     CONDA_MD5_CHECKSUM="42dac45eee5e58f05f37399adda45e85" && \
     \
-    apk add --no-cache --virtual=.build-dependencies bash && \
+    apk add --no-cache --virtual=.build-dependencies wget ca-certificates bash && \
     \
     mkdir -p "$CONDA_DIR" && \
     wget "http://repo.continuum.io/miniconda/Miniconda2-${CONDA_VERSION}-Linux-x86_64.sh" -O miniconda.sh && \
