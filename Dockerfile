@@ -4,8 +4,8 @@ ENV CONDA_DIR="/opt/conda"
 ENV PATH="$CONDA_DIR/bin:$PATH"
 
 # Install conda
-RUN CONDA_VERSION="4.0.5" && \
-    CONDA_MD5_CHECKSUM="42dac45eee5e58f05f37399adda45e85" && \
+RUN CONDA_VERSION="4.5.12" && \
+    CONDA_MD5_CHECKSUM="4be03f925e992a8eda03758b72a77298" && \
     \
     apk add --no-cache --virtual=.build-dependencies wget ca-certificates bash && \
     \
