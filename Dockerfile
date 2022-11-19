@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc:alpine-3.16
 
-ARG CONDA_VERSION="4.7.12.1"
-ARG CONDA_MD5="23bf3acd6aead6e91fb936fc185b033e"
+ARG CONDA_VERSION="4.8.3"
+ARG CONDA_MD5="19ce7d0039ab349914d928e7f32b1c1b"
 ARG CONDA_DIR="/opt/conda"
 
 ENV PATH="$CONDA_DIR/bin:$PATH"
@@ -13,7 +13,7 @@ RUN echo "**** install dev packages ****" && \
     \
     echo "**** get Miniconda ****" && \
     mkdir -p "$CONDA_DIR" && \
-    wget "http://repo.continuum.io/miniconda/Miniconda2-${CONDA_VERSION}-Linux-x86_64.sh" -O miniconda.sh && \
+    wget "http://repo.continuum.io/miniconda/Miniconda2-py27_${CONDA_VERSION}-Linux-x86_64.sh" -O miniconda.sh && \
     echo "$CONDA_MD5  miniconda.sh" | md5sum -c && \
     \
     echo "**** install Miniconda ****" && \
