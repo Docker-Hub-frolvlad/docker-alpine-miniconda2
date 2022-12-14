@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc:alpine-3.16
+FROM frolvlad/alpine-glibc:alpine-3.17
 
 ARG CONDA_VERSION="4.8.3"
 ARG CONDA_MD5="19ce7d0039ab349914d928e7f32b1c1b"
